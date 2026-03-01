@@ -27,6 +27,98 @@ bcra-estadisticas-cambiarias/
 
     Este código depende de librerías que no viene con Python estandar
 
+## Carpeta src/ ¿ Por que se llama así?
+
+´src´ viene de source (código fuente)
+
+Es una convención para separar:
+
+📦 Código del proyecto
+de
+
+📄 Archivos de configuración, tests, documentación, etc.
+
+Si no usás src/, Python puede importar módulos accidentalmente desde el root del proyecto.
+
+## ¿ Que es el archivo .gitignore ?
+
+.gitignore es un archivo que le dice a Git qué cosas NO debe versionar.
+
+Es literalmente una lista de archivos o carpetas que Git debe ignorar.
+
+Ejemplo típico:
+
+.venv/
+__pycache__/
+*.pyc
+.env
+2️⃣ ¿Por qué existe?
+
+Cuando trabajás en un proyecto, se generan archivos que:
+
+No son parte del código
+
+Son temporales
+
+Son locales a tu máquina
+
+Contienen información sensible
+
+Si no los ignorás:
+
+Git los sube al repositorio
+
+El repo se ensucia
+
+Puede romper entornos
+
+Podés filtrar datos sensibles
+
+3️⃣ En tu proyecto específico
+
+En bcra-estadisticas-cambiarias deberías ignorar:
+
+🔹 El entorno virtual
+.venv/
+
+Porque:
+
+Cada persona debe crear su propio entorno
+
+No se versionan binarios
+
+🔹 Archivos temporales de Python
+__pycache__/
+*.pyc
+
+Porque:
+
+Son archivos compilados automáticamente
+
+No forman parte del código fuente
+
+🔹 Archivos sensibles (si existieran)
+.env
+
+Si en el futuro agregás tokens o credenciales.
+
+4️⃣ Análisis conceptual (lo importante)
+
+Git versiona código fuente y archivos relevantes del proyecto.
+
+No debe versionar:
+
+Entornos
+
+Librerías instaladas
+
+Archivos temporales
+
+Datos intermedios
+
+Configuraciones locales
+
+.gitignore define esa frontera.
 
 # Pasos de este proyecto 🛣️
 
