@@ -120,6 +120,22 @@ Configuraciones locales
 
 .gitignore define esa frontera.
 
+# Archivo .gitignore
+
+¿Qué significa cada línea?
+
+.venv/ → ignora la carpeta completa del entorno virtual
+
+__pycache__/ → ignora archivos compilados
+
+*.pyc → ignora cualquier archivo .pyc
+
+.env → ignora posibles credenciales futuras
+
+.DS_Store / Thumbs.db → archivos basura del sistema operativo
+
+
+
 # Pasos de este proyecto 🛣️
 
 1. Crear un **Entorno Virtual** + **dependencias**
@@ -144,8 +160,12 @@ Ejemplo:
 
 Para comprobar usar:
 
-where python
+where python [X]
 
 Si estás dentro del entorno virtual, la ruta debería apuntar a algo como:
 
 .../bcra-estadisticas-cambiarias/.venv/Scripts/python.exe
+
+2. Crear el Archivo .gitignore
+
+Crear archivo .gitignore [X]
